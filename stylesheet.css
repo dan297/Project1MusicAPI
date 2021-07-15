@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: var(--col5);
+    background-color: var(--col1);
     color: var(--text)
 }
 
@@ -22,14 +22,37 @@ header {
     justify-content: center;
     align-items: center;
     font-size: 40px;
-    border-bottom: black;
+    border: black;
     min-height: 10%;
+    border-style: solid;
 }
 
-.main {
-    background-color: var(--col1);
+.h2 {
+    font-size: x-large;
+}
+
+main {
+    background-color: var(--col2);
     color: var(--col4);
     font-size: 25px;
+    border-style: ridge;
+    border-color: black;
+}
+
+#search-btn {
+    border: #0e1428;
+    border-radius: 2px;
+    border-style: solid;
+    background-color: var(--col3);
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.input {
+    font-size: large;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: black;
 }
 
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";

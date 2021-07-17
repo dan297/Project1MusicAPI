@@ -1,6 +1,4 @@
- 
-
-var artist = "";
+ var artist = "";
 var APIKey = '272852FTBBwuqJtoUuXgJwvesHROoz66uEYbSRJQBT67Y3fbtz64KCA8'
 var savedArtist = $(".search-btn")
 
@@ -9,10 +7,6 @@ $("#search-btn").click(function (event) {
     artist = $("#search-btn").val();
     console.log(event);
 });
-
-
-
-
 
 function getApi(queryURL) {
     fetch(queryURL)

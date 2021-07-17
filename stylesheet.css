@@ -61,4 +61,17 @@ main {
     border-color: black;
 }
 
+.savedCitiesSearch {
+    text-align: left;
+    background-color: lightblue;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-top-right-radius: 5px;
+    border-bottom-style: solid; 
+    border-bottom-color: lightgray;
+    width: 100%;
+}
+
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
+
+

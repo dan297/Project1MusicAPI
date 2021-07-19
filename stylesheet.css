@@ -39,7 +39,7 @@ main {
     border-color: black;
 }
 
-#search-btn {
+#search-btn, #clear-btn {
     border: #0e1428;
     border-radius: 2px;
     border-style: solid;
@@ -48,7 +48,7 @@ main {
     font-size: larger;
 }
 
-#search-btn:hover {
+#search-btn:hover, #clear-btn:hover {
     background-color: white;
     cursor: pointer;
     transform: scale(1.05);
@@ -61,7 +61,7 @@ main {
     border-color: black;
 }
 
-.savedCitiesSearch {
+.songs {
     text-align: left;
     background-color: lightblue;
     padding-top: 11px;
@@ -72,6 +72,10 @@ main {
     width: 100%;
 }
 
+.artist-name {
+    font: bold;
+    color: var(--text);
+}
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
 
 

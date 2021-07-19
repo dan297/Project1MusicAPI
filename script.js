@@ -1,8 +1,9 @@
 var artist = $(".input");
 var APIKey = '272852FTBBwuqJtoUuXgJwvesHROoz66uEYbSRJQBT67Y3fbtz64KCA8'
 var searchBtn = $("#search-btn")
-var results = $(".results-card")
-
+var results = $("#button0")
+var url = `https://api.happi.dev/v1/music?q=${artist.val()}&limit=10&apikey=${APIKey}&lyrics=0`
+var clearBtn = $("#clear-btn")
 
 // $("#search-btn").click(function (event) {
 //     event.preventDefault();
@@ -15,7 +16,6 @@ function handleSearchClick(event) {
     event.preventDefault()
     requestAPI(searchTerm);
     addSearchHistory(searchTerm);
-
 }
 
 function requestAPI(searchValue) {
@@ -27,32 +27,25 @@ function requestAPI(searchValue) {
             // results.append(`<li>Results: ${artistTracks}`)
             for (var i = 0; i < artistTracks.length; i++) {
                 var trackObject = artistTracks[i];
-                results.append(`<li>: ${trackObject.track} ${trackObject.artist}`);
-
-
+                results.append(`<li> ${trackObject.track} ${trackObject.artist}`);
             }
         });
 }
 
 function addSearchHistory(artistName) {
-    var artistContainer = $(".savedResults")
-    artistContainer.append(artistName)
-
+    var artistContainer = $("#box2")
+    artistContainer.append(`<li>- ${artistName}`)
 }
 
 $( document ).ready(function() {
     console.log( "ready!" );
 });
 
+function clearHistory() {
+    results.empty()
+}
 
-
-
-
-
-
-
-
-
+clearBtn.on("click", clearHistory)
 searchBtn.on("click", handleSearchClick)
 
 

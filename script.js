@@ -10,18 +10,53 @@ var results = $(".results-card")
 //     console.log(event);
 // });
 
-function getResponse(event) {
+function handleSearchClick(event) {
+    var searchTerm =  artist.val()
     event.preventDefault()
+    requestAPI(searchTerm);
+    addSearchHistory(searchTerm);
 
-    fetch(`https://api.happi.dev/v1/music?q=${artist.val()}&limit=10&apikey=${APIKey}&lyrics=0`)
-.then(response => response.json())
-.then(function (data) {
-    console.log(data)
-    results.append(`<li>Results: ${data.result}`)
-})
 }
 
-searchBtn.on("click", getResponse)
+function requestAPI(searchValue) {
+    fetch(`https://api.happi.dev/v1/music?q=${searchValue}&limit=10&apikey=${APIKey}&lyrics=0`)
+        .then(response => response.json())
+        .then(function (data) {
+            var artistTracks = data.result;
+            console.log(data);
+            // results.append(`<li>Results: ${artistTracks}`)
+            for (var i = 0; i < artistTracks.length; i++) {
+                var trackObject = artistTracks[i];
+                results.append(`<li>: ${trackObject.track} ${trackObject.artist}`);
+
+
+            }
+        });
+}
+
+function addSearchHistory(artistName) {
+    var artistContainer = $(".savedResults")
+    artistContainer.append(artistName)
+
+}
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+
+
+
+
+
+
+
+
+
+
+searchBtn.on("click", handleSearchClick)
+
+
+    
 
 // function getApi(queryURL) {
 //     var queryURL = `https://api.happi.dev/v1/music?q=${artist}&limit=10&apikey=${APIKey}&lyrics=0`

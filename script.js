@@ -1,7 +1,7 @@
 var artist = $(".input");
 var APIKey = '272852FTBBwuqJtoUuXgJwvesHROoz66uEYbSRJQBT67Y3fbtz64KCA8'
 var searchBtn = $("#search-btn")
-var results = $("#button0")
+var results = $("#box1")
 var url = `https://api.happi.dev/v1/music?q=${artist.val()}&limit=10&apikey=${APIKey}&lyrics=0`
 var clearBtn = $("#clear-btn")
 
@@ -25,12 +25,17 @@ function requestAPI(searchValue) {
         });
 }
 
-function addSearchHistory(input) {
+function addSearchHistory(artistName) {
     var container = document.getElementById("artist-box")
     var input = document.createElement("BUTTON")
     input.type = "text";
     input.className = "songs"
-    container.appendChild(`input, ${trackObject.artist}`)
+    input.innerHTML = artistName
+    container.appendChild(input)
+}
+
+function callPrevious() {
+    var previous = 
 }
 
 $( document ).ready(function() {

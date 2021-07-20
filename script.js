@@ -5,6 +5,13 @@ var results = $("#button0")
 var url = `https://api.happi.dev/v1/music?q=${artist.val()}&limit=10&apikey=${APIKey}&lyrics=0`
 var clearBtn = $("#clear-btn")
 
+var searchSongBtn = $("#searchSong-btn")
+var songName = $(".songInput");
+var APIkeyTwo = '53cb580a1dmsh4520291ecf1aae1p1c92d2jsnacd0d4cdfb24'
+var urlTwo = `https://shazam.p.rapidapi.com/search?term=${songName.val()}&limit=10&apikey=${APIkeyTwo}`
+var songresults = $("#button1")
+
+
 // $("#search-btn").click(function (event) {
 //     event.preventDefault();
 //     artist = $("#search-btn").val();
@@ -13,13 +20,21 @@ var clearBtn = $("#clear-btn")
 
 function handleSearchClick(event) {
     var searchTerm =  artist.val()
+    var songTerm = songName.val()
     event.preventDefault()
     requestAPI(searchTerm);
     addSearchHistory(searchTerm);
+    console.log('SongTerm:')
+    console.log(songTerm)
+    requestAPITwo(songTerm)
 }
 
-function requestAPI(searchValue) {
-    fetch(`https://api.happi.dev/v1/music?q=${searchValue}&limit=10&apikey=${APIKey}&lyrics=0`)
+
+
+
+
+function requestAPI(searchTerm) {
+    fetch(`https://api.happi.dev/v1/music?q=${searchTerm}&limit=10&apikey=${APIKey}&lyrics=0`)
         .then(response => response.json())
         .then(function (data) {
             var artistTracks = data.result;
@@ -49,19 +64,17 @@ clearBtn.on("click", clearHistory)
 searchBtn.on("click", handleSearchClick)
 
 
-    
-
-// function getApi(queryURL) {
-//     var queryURL = `https://api.happi.dev/v1/music?q=${artist}&limit=10&apikey=${APIKey}&lyrics=0`
-//     fetch(queryURL)
-//     .then(function (response) {
-//         console.log(response);
-//         if (response.status === 200) {
-//             response.textContent = response.status;
-//           }
-//           return response.json();
-//       });
-//       $(".results-card").append(`<li>${response.result}</li>`)
-// }
-
-//Display required response in HTML
+function requestAPITwo(songName) {
+    fetch(`https://shazam.p.rapidapi.com/search?term=${songName}&limit=10&rapidapi-key=${APIkeyTwo}`)
+    .then(response => response.json())
+        .then(function (data){
+        var artistNameImage = data.tracks;
+        console.log(data);
+        console.log('artistNameImage:')
+        console.log(artistNameImage)
+        for (var i = 0; i < artistNameImage.length; i++) {
+            var  SongObject = artistNameImage[i];
+            songresults.append(`<li> ${SongObject.track.hits[0].title}`);
+        }
+    })
+}

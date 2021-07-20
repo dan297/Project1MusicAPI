@@ -21,13 +21,27 @@
             <form type="label" class="is-uppercase">Artist:</form>
             <input class="input" type="text" placeholder="Enter search here...">
             <button id="search-btn">Search</button>
+
             <button id="clear-btn">Clear history</button>
 
         </div>
     </section>
+
+    <section class="columnsOne">
+        <div class="column is-one-thirdOne">
+            <form type="label" class="is-uppercase">Song:</form>
+            <input class="songInput" type="text" placeholder="Enter Song here...">
+            <button id="searchSong-btn">Search song</button>
+        </div>
+    </section>
+
+
+
     <div class="savedResults">
         <ol class="artist-name" style="text-transform: capitalize;"></ol>
-        <button class="songs" id="button0"></button>
+        <button class="artist" id="button0"></button>
+        <button class="artist" id="button1"></button>
+
     </div>
     <body>
         <br></br>
@@ -56,5 +70,6 @@
     crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
+
 
 </html>

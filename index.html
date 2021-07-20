@@ -21,27 +21,13 @@
             <form type="label" class="is-uppercase">Artist:</form>
             <input class="input" type="text" placeholder="Enter search here...">
             <button id="search-btn">Search</button>
-
             <button id="clear-btn">Clear history</button>
-
         </div>
     </section>
-
-    <section class="columnsOne">
-        <div class="column is-one-thirdOne">
-            <form type="label" class="is-uppercase">Song:</form>
-            <input class="songInput" type="text" placeholder="Enter Song here...">
-            <button id="searchSong-btn">Search song</button>
-        </div>
-    </section>
-
-
 
     <div class="savedResults">
         <ol class="artist-name" style="text-transform: capitalize;"></ol>
-        <button class="artist" id="button0"></button>
-        <button class="artist" id="button1"></button>
-
+        <container class="songs" id="container0"></container>
     </div>
     <body>
         <br></br>
@@ -49,7 +35,8 @@
             <div class="col-md-6 Card1">
                 <div class="card Songlist">
                     <div class="card-body">
-                        <h5 class="card-title">Playlist:</h5>
+
+                        <h4 class="card-title" style="text-transform: capitalize;">Playlist:</h4>
                         <ol id="box1" class="card-text"></ol>
                     </div>
                 </div>
@@ -57,9 +44,8 @@
             <br></br>
             <div class="col-md-6 Card2">
                 <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Artist:</h5>
-                        <ol id="box2" class="card-text" style="text-transform: capitalize;"></ol>
+                    <div class="artist-body">
+                        <h5 class="card-title" id="artist-box" style="text-transform: capitalize;">Artist:</h5>
                     </div>
                 </div>
             </div>
@@ -70,6 +56,4 @@
     crossorigin="anonymous"></script>
 <script src="script.js"></script>
 </body>
-
-
 </html>

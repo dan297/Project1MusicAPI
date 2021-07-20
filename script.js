@@ -25,9 +25,12 @@ function requestAPI(searchValue) {
         });
 }
 
-function addSearchHistory(artistName) {
-    var artistContainer = $("#box2")
-    artistContainer.append(`<li>- ${artistName}`)
+function addSearchHistory(input) {
+    var container = document.getElementById("artist-box")
+    var input = document.createElement("BUTTON")
+    input.type = "text";
+    input.className = "songs"
+    container.appendChild(`input, ${trackObject.artist}`)
 }
 
 $( document ).ready(function() {

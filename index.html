@@ -10,7 +10,9 @@
     <title>Music Search</title>
 </head>
 
-<header class="has-text-centered is-uppercase has-text-weight-bold">
+
+<body>
+    <header class="has-text-centered is-uppercase has-text-weight-bold">
     <h1>Artist Browser</h1>
     <p>Welcome!</p>
 </header>
@@ -24,8 +26,7 @@
             <button id="clear-btn">Clear history</button>
         </div>
     </section>
-
-</div>
+</main>
 </section>
 <section class="columnsOne">
 <div class="column is-one-thirdOne">
@@ -33,29 +34,23 @@
     <input class="songInput" type="text" placeholder="Enter Song here...">
     <button id="searchSong-btn">Search song</button>
     <button id="clear-btn">Clear history</button>
-
 </div>
 </section>
 <div class="savedResults">
 <ol class="artist-name" style="text-transform: capitalize;"></ol>
+<container class="songs" id="container0"></container>
 <container class="artist" id="button0"></button>
 <button class="artist" id="button1">
 </button>
 </div>
-
-
 <div id="artist-results">
 </div>
-
-
-
-    <body>
         <br></br>
         <div class="row container-fluid">
             <div class="col-md-6 Card1">
                 <div class="card Songlist">
                     <div class="card-body">
-
+                        <h4 class="card-title" style="text-transform: capitalize;">Playlist:</h4>
                         <h4 class="card-title" style="text-transform: capitalize;">Song:</h4>
                         <ol id="box1" class="card-text"></ol>
                     </div>
@@ -72,6 +67,7 @@
         </div>
         </div>
         <br></br>
+</body>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 <script src="script.js"></script>

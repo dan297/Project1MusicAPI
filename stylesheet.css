@@ -77,6 +77,44 @@ main {
     font: bold;
     color: var(--text);
 }
+
+#searchSong-btn, #clear-btn {
+    border: #0e1428;
+    border-radius: 2px;
+    border-style: solid;
+    background-color: var(--col3);
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#searchSong-btn:hover, #clear-btn:hover {
+    background-color: white;
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.songInput {
+    font-size: large;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: black;
+}
+
+
+
+
+
+img{
+    border: #0e1428;
+    border-radius: 20px;
+    width : 80px
+
+
+    
+    
+}
+
+
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";
 
 

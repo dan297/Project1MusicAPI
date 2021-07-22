@@ -2,6 +2,7 @@ var artist = $(".input");
 var APIKey = '272852FTBBwuqJtoUuXgJwvesHROoz66uEYbSRJQBT67Y3fbtz64KCA8'
 var searchBtn = $("#search-btn")
 var clearBtn = $("#clear-btn")
+var clearBtnImg = $("#clearImg-btn")
 
 
 var searchSongBtn = $("#searchSong-btn")
@@ -46,7 +47,7 @@ function addSearchHistory(artistName) {
 function addSearchHistory(artistName) {
     var container = document.getElementById("artist-box")
     var input = document.createElement("BUTTON")
-    input.type = "text";func
+    input.type = "text";
     input.className = "songs"
     input.id = "search-history-btn"
     input.innerHTML = artistName
@@ -103,21 +104,12 @@ function requestAPITwo(songName) {
 
         }
 
-        // console.log(data);
-        // console.log('artistName:')
-        // console.log('artistNameImage:')
-        // console.log(artistName)
-        // console.log(artistNameImage)
-        // for (var i = 0; i < artistName.length; i++) {
-        //     var  songObject = artistName[i];
-        //     
-        // }
-        // for (var i = 0; i < artistNameImage.length; i++) {
-        //     var imageObject = artistNameImage[i];
-        //     var imageEl = $("img")
-        //     imageEl.attr("src", imageObject)
-        //     imageResults.append(imageEl)
-        // }
+        function clearImage() {
+            imageResults.empty()
+        }
+
+        clearBtnImg.on("click", clearImage)
+
     })
 }
 

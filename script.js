@@ -46,7 +46,7 @@ function addSearchHistory(artistName) {
 function addSearchHistory(artistName) {
     var container = document.getElementById("artist-box")
     var input = document.createElement("BUTTON")
-    input.type = "text";func
+    input.type = "text";
     input.className = "songs"
     input.id = "search-history-btn"
     input.innerHTML = artistName

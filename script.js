@@ -86,11 +86,11 @@ function requestAPITwo(songName) {
 
             // songresults.append(artistName);
 
-            var artistButton = $("button")
+            var artistButton = $("<button>")
             artistButton.html(artistName)
             imageResults.append(artistButton)
 
-            var imageEl = $("img")
+            var imageEl = $("<img>")
             imageEl.attr("src", artistNameImage)
             imageResults.append(imageEl)
 

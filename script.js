@@ -9,9 +9,10 @@ var urlTwo = `https://shazam.p.rapidapi.com/search?term=${songName.val()}&limit=
 var songresults = $("#button1")
 var results = $("#box1")
 var url = `https://api.happi.dev/v1/music?q=${artist.val()}&limit=10&apikey=${APIKey}&lyrics=0`
+var historyBtn = $("#search-history-btn")
 
 function handleSearchClick(event) {
-    var searchTerm =  artist.val()
+    var searchTerm = artist.val()
     event.preventDefault()
     requestAPI(searchTerm);
     addSearchHistory(searchTerm);
@@ -31,22 +32,22 @@ function requestAPI(searchValue) {
 }
 
 function addSearchHistory(artistName) {
-    var artistContainer = $("#box2")
-    artistContainer.append(`<li>- ${artistName}`)
-}
-
-function addSearchHistory(artistName) {
     var container = document.getElementById("artist-box")
     var input = document.createElement("BUTTON")
     input.type = "text";
     input.className = "songs"
+    input.id = "search-history-btn"
     input.innerHTML = artistName
     container.appendChild(input)
 }
 
-function callPrevious() {
-    var previous = 
+function handleSearchClickHistory(event) {
+    var searchTerm = historyBtn.val()
+    event.preventDefault()
+    requestAPI(searchTerm);
 }
+
+historyBtn.on("click", handleSearchClickHistory)
 
 $( document ).ready(function() {
     console.log( "ready!" );

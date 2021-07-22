@@ -78,7 +78,7 @@ main {
     color: var(--text);
 }
 
-#searchSong-btn, #clear-btn {
+#searchSong-btn, #clearImg-btn {
     border: #0e1428;
     border-radius: 2px;
     border-style: solid;
@@ -87,7 +87,7 @@ main {
     font-size: larger;
 }
 
-#searchSong-btn:hover, #clear-btn:hover {
+#searchSong-btn:hover, #clearImg-btn:hover {
     background-color: white;
     cursor: pointer;
     transform: scale(1.05);

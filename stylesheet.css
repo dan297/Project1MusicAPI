@@ -70,6 +70,7 @@ main {
     border-bottom-style: solid; 
     border-bottom-color: lightgray;
     width: 100%;
+    text-transform: capitalize;
 }
 
 .artist-name {

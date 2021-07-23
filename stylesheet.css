@@ -4,15 +4,16 @@
 
 :root {
     --col1: #f0a202;
-    --col2: #f18805;
-    --col3: #d95d39;
-    --col4: #0e1428;
+    --col2: lightblue;
+    --col3: grey;
+    --col4: white;
     --col5: #7b9e89;
+    --col5: black;
     --text: white;
 }
 
 body {
-    background-color: var(--col1);
+    background-color: var(--col3);
     color: var(--text)
 }
 
@@ -32,7 +33,7 @@ header {
 }
 
 main {
-    background-color: var(--col2);
+    background-color: var(--col5);
     color: var(--col4);
     font-size: 25px;
     border-style: ridge;
@@ -40,18 +41,21 @@ main {
 }
 
 #search-btn, #clear-btn {
-    border: #0e1428;
-    border-radius: 2px;
+    border: white;
+    border-radius: 20px;
     border-style: solid;
     background-color: var(--col3);
     font-weight: bolder;
     font-size: larger;
+    color: white;
 }
 
 #search-btn:hover, #clear-btn:hover {
     background-color: white;
     cursor: pointer;
     transform: scale(1.05);
+    color: black;
+
 }
 
 .input {
@@ -61,16 +65,24 @@ main {
     border-color: black;
 }
 
+.songInput {
+    font-size: large;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: black;
+}
 .songs {
     text-align: left;
-    background-color: lightblue;
+    background-color: grey;
     padding-top: 11px;
     padding-bottom: 11px;
     border-top-right-radius: 5px;
     border-bottom-style: solid; 
-    border-bottom-color: lightgray;
+    border-bottom-color: black;
     width: 100%;
     text-transform: capitalize;
+    font: bold;
+
 }
 
 .artist-name {
@@ -79,28 +91,30 @@ main {
 }
 
 #searchSong-btn, #clearImg-btn {
-    border: #0e1428;
-    border-radius: 2px;
+    border: white;
+    border-radius: 20px;
     border-style: solid;
     background-color: var(--col3);
     font-weight: bolder;
     font-size: larger;
+    color: white;
 }
 
 #searchSong-btn:hover, #clearImg-btn:hover {
     background-color: white;
     cursor: pointer;
     transform: scale(1.05);
+    color: black;
 }
 
-.songInput {
-    font-size: large;
-    border-radius: 20px;
-    border-style: groove;
+
+.card-title{
+    background-color: var(--col5);
+    color: var(--col4);
+    font-size: 25px;
+    border-style: ridge;
     border-color: black;
 }
-
-
 
 
 
@@ -113,6 +127,8 @@ img{
     
     
 }
+
+
 
 
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css";

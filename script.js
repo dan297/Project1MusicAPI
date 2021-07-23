@@ -2,11 +2,15 @@ var artist = $(".input");
 var APIKey = '272852FTBBwuqJtoUuXgJwvesHROoz66uEYbSRJQBT67Y3fbtz64KCA8'
 var searchBtn = $("#search-btn")
 var clearBtn = $("#clear-btn")
+var clearBtnImg = $("#clearImg-btn")
+
+
 var searchSongBtn = $("#searchSong-btn")
 var songName = $(".songInput");
 var APIkeyTwo = '53cb580a1dmsh4520291ecf1aae1p1c92d2jsnacd0d4cdfb24'
-var urlTwo = `https://shazam.p.rapidapi.com/search?term=${songName.val()}&limit=10&apikey=${APIkeyTwo}`
+var urlTwo = `https://shazam.p.rapidapi.com/search?term=${songName}&limit=10&apikey=${APIkeyTwo}`
 var songresults = $("#button1")
+var imageResults = $("#artist-results")
 var results = $("#box1")
 var url = `https://api.happi.dev/v1/music?q=${artist.val()}&limit=10&apikey=${APIKey}&lyrics=0`
 var historyBtn = $("#search-history-btn")
@@ -16,6 +20,12 @@ function handleSearchClick(event) {
     event.preventDefault()
     requestAPI(searchTerm);
     addSearchHistory(searchTerm);
+}
+
+function handleSongSearchClick(event) {
+    event.preventDefault()
+    var songTerm = songName.val()
+    requestAPITwo(songTerm)
 }
 
 function requestAPI(searchValue) {
@@ -30,7 +40,10 @@ function requestAPI(searchValue) {
             }
         });
 }
-
+function addSearchHistory(artistName) {
+    var artistContainer = $("#box2")
+    artistContainer.append(`<li>- ${artistName}`)
+}
 function addSearchHistory(artistName) {
     var container = document.getElementById("artist-box")
     var input = document.createElement("BUTTON")
@@ -59,18 +72,45 @@ function clearHistory() {
 
 clearBtn.on("click", clearHistory)
 searchBtn.on("click", handleSearchClick)
+searchSongBtn.on("click", handleSongSearchClick)
 
 function requestAPITwo(songName) {
-    fetch(`https://shazam.p.rapidapi.com/search?term=${songName}&limit=10&rapidapi-key=${APIkeyTwo}`)
+    fetch(`https://shazam.p.rapidapi.com/search?term=${songName}&rapidapi-key=${APIkeyTwo}`)
     .then(response => response.json())
         .then(function (data){
-        var artistNameImage = data.tracks;
-        console.log(data);
-        console.log('artistNameImage:')
-        console.log(artistNameImage)
-        for (var i = 0; i < artistNameImage.length; i++) {
-            var  SongObject = artistNameImage[i];
-            songresults.append(`<li> ${SongObject.track.hits[0].title}`);
+        
+
+        var hits = data.tracks.hits;
+        for (let i = 0; i < hits.length; i++) {
+            var hit = hits[i]
+
+            var artistName = hit.track.subtitle;
+            var artistNameImage = hit.track.images.background;
+
+            console.log(`Entry #${i}: artist ${artistName}, img ${artistNameImage}`)
+
+            // songresults.append(artistName);
+
+            var artistButton = $("<button>")
+            artistButton.html(artistName)
+            imageResults.append(artistButton)
+
+            var imageEl = $("<img>")
+            imageEl.attr("src", artistNameImage)
+            imageResults.append(imageEl)
+
+            
+
+
         }
+
+        function clearImage() {
+            imageResults.empty()
+        }
+
+        clearBtnImg.on("click", clearImage)
+
     })
 }
+
+

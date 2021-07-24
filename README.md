@@ -16,6 +16,8 @@ Second function allows the user to get artist's picture by searching the song na
 
 User can clear their search history by using the buttons enabled for both sections.
 
+
+
 ## Screenshots
 
 https://user-images.githubusercontent.com/79667084/126863172-8fad1935-0b2e-45fe-af7b-889d27defd6b.png

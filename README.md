@@ -1,9 +1,5 @@
 # Project1MusicAPI
 
-Deployment link :
-
-# Project1MusicAPI
-
 Deployment link : 
 
 https://dan297.github.io/Project1MusicAPI/index.html
@@ -31,6 +27,7 @@ https://user-images.githubusercontent.com/79667084/126863172-8fad1935-0b2e-45fe-
 https://user-images.githubusercontent.com/79667084/126863220-97d18e5d-19df-4dca-b0e1-78c513014d1f.png
 
 https://user-images.githubusercontent.com/79667084/126863286-31f03be8-74fc-4200-94c8-a512362ae09d.png
+
 
 
 ## User Story

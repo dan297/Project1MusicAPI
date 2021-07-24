@@ -4,6 +4,8 @@ Deployment link :
 
 https://dan297.github.io/Project1MusicAPI/index.html
 
+https://docs.google.com/presentation/d/1_IkIPh4hBIh9H879kjAVA3Qh28ZyMccg/edit?usp=drive_web&ouid=108683363049057376621&rtpof=true
+
 # Description
 
 This project has been developed as a group project, MusicsearchAPI is a user friendly webpage enabling user to find their favorite songs and artist details.

@@ -16,6 +16,16 @@ Second function allows the user to get artist's picture by searching the song na
 
 User can clear their search history by using the buttons enabled for both sections.
 
+## Technical
+
+Used 2 different api calls 
+
+First API : https://happi.dev/docs/music
+This API gets data for our first section which is to get all the songs for certain artist and displays in the main page.
+
+Second API : https://rapidapi.com/apidojo/api/shazam
+Second API gets and displays picture for the artist given their song name.
+
 
 
 ## Screenshots

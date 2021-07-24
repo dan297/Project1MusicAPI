@@ -37,7 +37,9 @@ https://user-images.githubusercontent.com/79667084/126863286-31f03be8-74fc-4200-
 
 
 AS A DJ with a busy schedule
+
 I WANT to search for songs quickly to play
+
 SO THAT I can manage my time effectively
 
 

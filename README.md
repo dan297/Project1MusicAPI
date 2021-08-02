@@ -64,3 +64,14 @@ THEN artist images and their name is shown
 WHEN the screen is refeshed 
 
 THEN artist names are saved in local storage
+
+
+## Technologies used 
+
+Bulma
+CSS
+HTML
+JavaScript
+Music API documentation
+
+

@@ -28,6 +28,23 @@ https://user-images.githubusercontent.com/79667084/126863220-97d18e5d-19df-4dca-
 
 https://user-images.githubusercontent.com/79667084/126863286-31f03be8-74fc-4200-94c8-a512362ae09d.png
 
+## Technologies used 
+
+Bulma
+
+CSS
+
+JavaScript
+
+Jquery
+
+HTML
+
+2 outsourced API documentation
+
+Favicon
+
+Google fonts
 
 
 ## User Story

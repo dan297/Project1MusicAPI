@@ -16,6 +16,25 @@ Second function allows the user to get artist's picture by searching the song na
 
 User can clear their search history by using the buttons enabled for both sections.
 
+## Technologies used 
+
+Bulma
+
+HTML
+
+CSS
+
+JavaScript
+
+Jquery 
+
+Favicon
+
+Google fonts
+
+2 external API documentation
+
+
 ## Presentation/Google Docs link:
 https://docs.google.com/presentation/d/1_IkIPh4hBIh9H879kjAVA3Qh28ZyMccg/edit?usp=drive_web&ouid=108683363049057376621&rtpof=true
 

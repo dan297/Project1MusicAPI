@@ -22,12 +22,11 @@ https://docs.google.com/presentation/d/1_IkIPh4hBIh9H879kjAVA3Qh28ZyMccg/edit?us
 
 ## Screenshots
 
-https://user-images.githubusercontent.com/79667084/126863172-8fad1935-0b2e-45fe-af7b-889d27defd6b.png
+<img width="1117" alt="Screenshot 2021-08-03 at 18 40 15" src="https://user-images.githubusercontent.com/71897967/128061234-e5623f2f-06fb-4280-b2c1-c10fd8692706.png">
 
-https://user-images.githubusercontent.com/79667084/126863220-97d18e5d-19df-4dca-b0e1-78c513014d1f.png
+<img width="1115" alt="Screenshot 2021-08-03 at 18 40 24" src="https://user-images.githubusercontent.com/71897967/128061254-e822bcf7-bc25-49c0-b6ec-5e7e68960bb9.png">
 
-https://user-images.githubusercontent.com/79667084/126863286-31f03be8-74fc-4200-94c8-a512362ae09d.png
-
+<img width="1116" alt="Screenshot 2021-08-03 at 18 40 31" src="https://user-images.githubusercontent.com/71897967/128061265-65125107-f8e2-43fe-9abc-758d2acecf8c.png">
 
 
 ## User Story
@@ -64,3 +63,9 @@ THEN artist images and their name is shown
 WHEN the screen is refeshed 
 
 THEN artist names are saved in local storage
+
+## Contact information 
+
+danielwhite98@icloud.com
+
+
